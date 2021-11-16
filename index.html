@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        .spanClass {
+            color: red;
+        }
+        .linkClass {
+            display: block;
+            text-decoration: underline;
+            color: blue;
+            margin-bottom: 20px;
+        }
+      </style>
+</head>
+<body>
+    <script type="text/javascript">
+        let divNode = document.createElement('div');
+        let spanNode = document.createElement('span');
+        let inputNode = document.createElement('input');
+        let buttonNode = document.createElement('button');
+        let linkNode = document.createElement('a');
+        
+        divNode.setAttribute('id', 'root');
+        document.body.append(divNode);
+        
+        spanNode.classList.add('spanClass');
+        spanNode.textContent = 'Введите текст';
+        
+        linkNode.textContent = 'Переход на новую ссылку';
+        linkNode.classList.add('linkClass');
+        
+        divNode.append(linkNode);
+        divNode.append(spanNode);
+        divNode.append(inputNode);
+        
+        buttonNode.textContent = 'Enter';
+        divNode.append(buttonNode);
+    </script>
+</body>
+</html>
